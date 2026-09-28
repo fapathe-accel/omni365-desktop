@@ -70,6 +70,29 @@ export async function probeInstance(origin: string): Promise<SetupError | null> 
   }
 }
 
+export function isSecureUrl(target: string): boolean {
+  try {
+    return new URL(target).protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * An OpenID Connect authorisation request that hands the answer back to the
+ * instance: the SSO button of the sign-in page. The provider lives on its own
+ * origin, which the instance does not publish.
+ */
+export function isSignInRedirect(target: string): boolean {
+  try {
+    const url = new URL(target);
+    const back = url.searchParams.get("redirect_uri");
+    return url.protocol === "https:" && back !== null && isInstanceUrl(back);
+  } catch {
+    return false;
+  }
+}
+
 export function isInstanceUrl(target: string): boolean {
   const { instance } = readSettings();
   if (!instance) {

@@ -19,6 +19,8 @@ import { pickScreen } from "./screen-picker";
 import {
   instanceOrigin,
   isInstanceUrl,
+  isSecureUrl,
+  isSignInRedirect,
   probeInstance,
   readSettings,
   writeSettings,
@@ -174,17 +176,31 @@ function changeInstance(): void {
 }
 
 /**
- * The instance and nothing else: the window never navigates off its origin,
- * a link elsewhere opens in the browser, and only an instance page is granted
- * the camera, microphone, notifications or screen.
+ * The instance and nothing else: the window leaves its origin only to sign in
+ * through the instance's SSO provider, a link elsewhere opens in the browser,
+ * and only an instance page is granted the camera, microphone, notifications
+ * or screen.
  */
 function lockDownContents(): void {
   app.on("web-contents-created", (_event, contents) => {
-    contents.on("will-navigate", (event, url) => {
-      if (!isInstanceUrl(url)) {
-        event.preventDefault();
-        openExternal(url);
+    let signingIn = false;
+    contents.on("did-navigate", (_navigation, url) => {
+      if (isInstanceUrl(url)) {
+        signingIn = false;
       }
+    });
+    contents.on("will-navigate", (event, url) => {
+      if (isInstanceUrl(url)) {
+        return;
+      }
+      // The provider's own pages (password, second factor) follow until it
+      // sends the window back to the instance.
+      if (isSignInRedirect(url) || (signingIn && isSecureUrl(url))) {
+        signingIn = true;
+        return;
+      }
+      event.preventDefault();
+      openExternal(url);
     });
     contents.on("will-attach-webview", (event) => event.preventDefault());
     contents.setWindowOpenHandler(({ url }) => {
