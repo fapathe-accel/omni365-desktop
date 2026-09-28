@@ -42,7 +42,7 @@ export async function pickScreen(
     width: 760,
     webPreferences: {
       contextIsolation: true,
-      preload: join(app.getAppPath(), "dist", "local-preload.js"),
+      preload: join(app.getAppPath(), "dist", "preload.js"),
       sandbox: true,
     },
   });

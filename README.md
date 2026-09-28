@@ -41,8 +41,8 @@ src/
   menu.ts            menu de l'application et icône de la barre des tâches
   screen-picker.ts   sélecteur d'écran pour getDisplayMedia()
   messages.ts        textes FR (référence) et EN
-  preload.ts         pont exposé à l'app web : window.omni365Desktop
-  local-preload.ts   pont des pages locales : window.omni365Local
+  preload.ts         pont exposé à l'app web : window.omni365Desktop,
+                     et aux pages locales : window.omni365Local
   pages/             page de premier lancement et sélecteur d'écran
 scripts/build.ts     bundle Bun vers dist/ (electron-updater compris : aucun node_modules n'est embarqué)
 electron-builder.yml packaging

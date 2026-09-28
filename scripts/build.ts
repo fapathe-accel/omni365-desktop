@@ -2,11 +2,11 @@ import { cp, rm } from "node:fs/promises";
 
 await rm("dist", { force: true, recursive: true });
 
-// The main process and the preloads are CommonJS: a sandboxed preload cannot
+// The main process and the preload are CommonJS: a sandboxed preload cannot
 // load an ES module. electron-updater is bundled in, so the packaged app ships
 // no node_modules at all.
 const main = await Bun.build({
-  entrypoints: ["src/main.ts", "src/preload.ts", "src/local-preload.ts"],
+  entrypoints: ["src/main.ts", "src/preload.ts"],
   external: ["electron"],
   format: "cjs",
   outdir: "dist",
