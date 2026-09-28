@@ -1,7 +1,7 @@
 # Same appId as the v1 prototype (omni365desktop), so an install upgrades in place.
 appId: net.Accel.omni365
 productName: Omni365
-copyright: Copyright © 2026 Heritage Africa
+copyright: Copyright © 2026 Heritage Africa by Accel-Tech
 
 directories:
   output: release
@@ -51,4 +51,4 @@ linux:
   artifactName: Omni365-${version}-${arch}.${ext}
   category: Office
   synopsis: Espace de travail Omni365
-  maintainer: Heritage Africa <support@heritage.africa>
+  maintainer: Heritage Africa by Accel-Tech <support@heritage.africa>
