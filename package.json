@@ -1,7 +1,7 @@
 {
   "name": "omni365-desktop",
   "productName": "Omni365",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Client de bureau Omni365 pour Windows, macOS et Linux",
   "author": "Heritage Africa",
   "homepage": "https://github.com/fapathe-accel/omni365-desktop",
