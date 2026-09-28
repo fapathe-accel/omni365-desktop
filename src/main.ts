@@ -342,8 +342,12 @@ function registerProtocol(): void {
 function start(): void {
   // Windows shows an app's notifications only under the identity its Start
   // menu shortcut carries, which the installer names after the appId.
+  // Unpackaged, Electron adds its own "Electron" shortcut for that identity,
+  // whose logo would then stand for the installed app too.
   if (process.platform === "win32") {
-    app.setAppUserModelId(APP_USER_MODEL_ID);
+    app.setAppUserModelId(
+      app.isPackaged ? APP_USER_MODEL_ID : `${APP_USER_MODEL_ID}.dev`
+    );
   }
   registerProtocol();
   pendingDeepLink = deepLinkFromArgv(process.argv);
