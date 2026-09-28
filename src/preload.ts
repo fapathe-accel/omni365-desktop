@@ -15,8 +15,33 @@ if (window.location.protocol === "file:") {
   contextBridge.exposeInMainWorld("omni365Local", bridge);
 } else {
   const bridge: DesktopBridge = {
+    focus: () => ipcRenderer.send("desktop:focus"),
     platform: process.platform,
     setBadgeCount: (count) => ipcRenderer.send("desktop:badge", count),
   };
   contextBridge.exposeInMainWorld("omni365Desktop", bridge);
+
+  // The web app answers a notification's click with `window.focus()`, which
+  // cannot bring back a window hidden in the tray. Every notification the page
+  // creates also asks the main process to show the window. Runs in the page's
+  // world, before its own scripts, so it must be self-contained.
+  contextBridge.executeInMainWorld({
+    func: () => {
+      const Native = window.Notification;
+      if (!Native) {
+        return;
+      }
+      class DesktopNotification extends Native {
+        constructor(title: string, options?: NotificationOptions) {
+          super(title, options);
+          this.addEventListener("click", () => window.omni365Desktop?.focus());
+        }
+      }
+      Object.defineProperty(window, "Notification", {
+        configurable: true,
+        value: DesktopNotification,
+        writable: true,
+      });
+    },
+  });
 }

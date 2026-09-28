@@ -31,6 +31,8 @@ const isMac = process.platform === "darwin";
 const hidesOnClose = process.platform !== "linux";
 /** Offered on the first-run screen; the viewer may enter any other instance. */
 const SUGGESTED_INSTANCE = "https://omni365v2.heritage.africa";
+/** The `appId` of electron-builder.yml. */
+const APP_USER_MODEL_ID = "net.Accel.omni365";
 const UPDATE_INTERVAL_MS = 4 * 60 * 60 * 1000;
 /** Chromium's code for a navigation the page itself replaced. */
 const ERR_ABORTED = -3;
@@ -129,6 +131,8 @@ function createWindow(): void {
     title: app.name,
     width: bounds?.width ?? 1360,
     webPreferences: {
+      // Hidden in the tray, the page still has to hear of new messages on time.
+      backgroundThrottling: false,
       contextIsolation: true,
       nodeIntegration: false,
       preload: distPath("preload.js"),
@@ -300,6 +304,11 @@ function registerLocalBridge(): void {
       loadInstance();
     }
   });
+  ipcMain.on("desktop:focus", (event) => {
+    if (isInstanceUrl(event.senderFrame?.url ?? "")) {
+      showWindow();
+    }
+  });
   ipcMain.on("desktop:badge", (event, count: unknown) => {
     if (isInstanceUrl(event.senderFrame?.url ?? "") && typeof count === "number") {
       app.setBadgeCount(Math.max(0, Math.floor(count)));
@@ -331,6 +340,11 @@ function registerProtocol(): void {
 }
 
 function start(): void {
+  // Windows shows an app's notifications only under the identity its Start
+  // menu shortcut carries, which the installer names after the appId.
+  if (process.platform === "win32") {
+    app.setAppUserModelId(APP_USER_MODEL_ID);
+  }
   registerProtocol();
   pendingDeepLink = deepLinkFromArgv(process.argv);
 

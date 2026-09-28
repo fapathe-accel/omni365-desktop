@@ -7,7 +7,7 @@ L'application ouvre l'instance Omni365 de l'utilisateur dans une fenêtre native
 - **Choix de l'instance au premier lancement.** L'adresse saisie est vérifiée : l'instance doit publier un `manifest.webmanifest` qui déclare le protocole `web+omni`. On peut en changer depuis le menu ou l'icône de la barre des tâches.
 - **Une fenêtre limitée à l'instance.** Tout lien vers un autre site s'ouvre dans le navigateur. Seules les pages de l'instance ont accès à la caméra, au micro, aux notifications et au partage d'écran.
 - **Partage d'écran pour Talk.** Un sélecteur d'écrans et de fenêtres s'affiche. Sur macOS 15 et plus, c'est celui du système.
-- **Notifications natives**, qui passent par l'API Notification du navigateur, déjà utilisée par l'app web.
+- **Notifications natives.** L'app web les envoie avec l'API `Notification` du navigateur, que Windows, macOS et Linux affichent comme des notifications du système. Elles arrivent aussi quand la fenêtre est masquée : la page n'est pas ralentie en arrière-plan. Un clic sur une notification ramène la fenêtre, même depuis la barre des tâches. Sous Windows, elles s'affichent pour l'app installée, dont le raccourci du menu Démarrer porte l'identifiant `net.Accel.omni365`, et non en `bun run dev`.
 - **Icône dans la barre des tâches**, avec l'option « Lancer au démarrage » sur Windows et macOS. Fermer la fenêtre la masque sans quitter l'app, sauf sous Linux.
 - **Liens `omni365://`** : `omni365://mail`, `omni365://files`, `omni365://chat`, `omni365://calendar`, `omni365://contacts`. Ils passent par la route `/protocol-handler` de l'app web.
 - **Mises à jour automatiques** depuis les GitHub Releases (`electron-updater`).
@@ -54,10 +54,11 @@ Les pages de l'instance voient `window.omni365Desktop` :
 
 ```ts
 window.omni365Desktop?.platform;          // "win32" | "darwin" | "linux"
+window.omni365Desktop?.focus();           // affiche et met au premier plan la fenêtre
 window.omni365Desktop?.setBadgeCount(3);  // badge de l'icône (macOS, Linux Unity)
 ```
 
-L'app web ne l'appelle pas encore. Le badge des non-lus est la prochaine étape côté `omni365-client`.
+Le preload enveloppe aussi `window.Notification` pour qu'un clic appelle `focus()`, sans que l'app web ait à le faire. L'app web n'appelle pas encore `setBadgeCount` : le badge des non-lus est la prochaine étape côté `omni365-client`.
 
 ## Construire les installateurs
 

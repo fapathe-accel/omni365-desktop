@@ -32,12 +32,15 @@ export interface LocalBridge {
 
 declare global {
   interface Window {
+    omni365Desktop?: DesktopBridge;
     omni365Local: LocalBridge;
   }
 }
 
 /** What the Omni365 web app reaches through `window.omni365Desktop`. */
 export interface DesktopBridge {
+  /** Shows and focuses the window, even when it is hidden in the tray. */
+  focus(): void;
   platform: NodeJS.Platform;
   setBadgeCount(count: number): void;
 }
