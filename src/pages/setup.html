@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'"
+    />
+    <title>Omni365</title>
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body>
+    <main class="setup">
+      <form class="card" id="form" novalidate>
+        <img src="../icon.png" alt="" />
+        <h1 id="title"></h1>
+        <p id="lead"></p>
+        <label for="instance" id="label"></label>
+        <input
+          id="instance"
+          name="instance"
+          type="text"
+          inputmode="url"
+          autocomplete="url"
+          spellcheck="false"
+          required
+        />
+        <div class="error" id="error" role="alert"></div>
+        <div class="actions">
+          <button type="button" id="retry" hidden></button>
+          <button type="submit" class="primary" id="submit"></button>
+        </div>
+      </form>
+    </main>
+    <script src="setup.js"></script>
+  </body>
+</html>

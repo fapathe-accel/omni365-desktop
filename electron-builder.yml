@@ -1,0 +1,54 @@
+# Same appId as the v1 prototype (omni365desktop), so an install upgrades in place.
+appId: net.Accel.omni365
+productName: Omni365
+copyright: Copyright © 2026 Heritage Africa
+
+directories:
+  output: release
+  buildResources: build
+
+# Everything the app runs is bundled into dist/ (see scripts/build.ts).
+files:
+  - dist/**
+  - package.json
+
+protocols:
+  - name: Omni365
+    schemes: [omni365]
+
+publish:
+  provider: github
+  owner: fapathe-accel
+  repo: omni365-desktop
+
+win:
+  target: [nsis]
+  artifactName: Omni365-Setup-${version}.${ext}
+
+nsis:
+  oneClick: true
+  perMachine: false
+
+mac:
+  target:
+    - target: dmg
+      arch: [universal]
+    - target: zip
+      arch: [universal]
+  artifactName: Omni365-${version}-${arch}.${ext}
+  category: public.app-category.productivity
+  hardenedRuntime: true
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    NSCameraUsageDescription: Omni365 utilise la caméra pour les appels vidéo.
+    NSMicrophoneUsageDescription: Omni365 utilise le micro pour les appels.
+  # Runs only when APPLE_ID, APPLE_APP_SPECIFIC_PASSWORD and APPLE_TEAM_ID are set.
+  notarize: true
+
+linux:
+  target: [AppImage, deb]
+  artifactName: Omni365-${version}-${arch}.${ext}
+  category: Office
+  synopsis: Espace de travail Omni365
+  maintainer: Heritage Africa <support@heritage.africa>

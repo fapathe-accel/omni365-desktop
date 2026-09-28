@@ -1,0 +1,25 @@
+{
+  "name": "omni365-desktop",
+  "productName": "Omni365",
+  "version": "0.1.0",
+  "description": "Client de bureau Omni365 pour Windows, macOS et Linux",
+  "author": "Heritage Africa",
+  "homepage": "https://github.com/fapathe-accel/omni365-desktop",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "dev": "bun run build && electron .",
+    "typecheck": "tsc --noEmit",
+    "dist": "bun run build && electron-builder --publish never",
+    "release": "bun run build && electron-builder --publish always"
+  },
+  "trustedDependencies": ["electron"],
+  "devDependencies": {
+    "@types/bun": "1.4.2",
+    "electron": "44.4.5",
+    "electron-builder": "^26.15.3",
+    "electron-updater": "^6.8.9",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:"
+    />
+    <title>Omni365</title>
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body>
+    <main class="picker">
+      <h1 id="title"></h1>
+      <div class="sources" id="sources"></div>
+      <div class="actions">
+        <button type="button" id="cancel"></button>
+        <button type="button" class="primary" id="share" disabled></button>
+      </div>
+    </main>
+    <script src="picker.js"></script>
+  </body>
+</html>
