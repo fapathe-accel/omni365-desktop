@@ -53,9 +53,22 @@ jobs:
         run: bun run build
 
       # Signing is skipped, not failed, when a secret is missing: the installer
-      # is then unsigned (SmartScreen / Gatekeeper warning).
+      # is then unsigned (SmartScreen / Gatekeeper warning). A missing secret
+      # still sets CSC_LINK to an empty string, which electron-builder reads as
+      # a path to the project folder, so it is unset. Without a certificate the
+      # Mac app is signed ad hoc, since Apple Silicon calls an unsigned app
+      # damaged; notarization is skipped until the Apple secrets exist.
       - name: Package
-        run: bunx electron-builder --publish ${{ startsWith(github.ref, 'refs/tags/') && 'always' || 'never' }}
+        shell: bash
+        run: |
+          extra=()
+          if [ -z "$CSC_LINK" ]; then
+            unset CSC_LINK CSC_KEY_PASSWORD
+            if [ "$RUNNER_OS" = "macOS" ]; then
+              extra+=("-c.mac.identity=-")
+            fi
+          fi
+          bunx electron-builder --publish ${{ startsWith(github.ref, 'refs/tags/') && 'always' || 'never' }} "${extra[@]}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_LINK: ${{ matrix.os == 'macos-latest' && secrets.MAC_CSC_LINK || matrix.os == 'windows-latest' && secrets.WIN_CSC_LINK || '' }}
