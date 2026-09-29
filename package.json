@@ -1,10 +1,10 @@
 {
   "name": "omni365-desktop",
   "productName": "Omni365",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Client de bureau Omni365 pour Windows, macOS et Linux",
   "author": "Heritage Africa by Accel-Tech",
-  "homepage": "https://github.com/fapathe-accel/omni365-desktop",
+  "homepage": "https://accel-tech.net",
   "private": true,
   "main": "dist/main.js",
   "scripts": {
