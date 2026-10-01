@@ -1,0 +1,186 @@
+﻿CONTRAT DE LICENCE UTILISATEUR FINAL (EULA)
+OMNI 365
+
+Editeur / Concédant : Accel Tech
+Version 1.0 - Septembre 2026
+
+Applicable aux licences annuelles destinées aux administrations publiques et privées, collectivités et organismes du secteur public dans l'espace UEMOA / CEDEAO et pays associés.
+
+
+PREAMBULE
+
+Le présent Contrat de Licence Utilisateur Final (« EULA » ou « Contrat ») régit les conditions d'utilisation du logiciel et des services OMNI 365 (ci-après le « Logiciel » ou « OMNI 365 ») fournis par Accel Tech (ci-après le « Concédant » ou « Accel Tech »).
+
+En installant, accédant, activant ou utilisant OMNI 365, le Licencié (administration, organisme public ou entité autorisée) reconnaît avoir lu, compris et accepté sans réserve l'intégralité des présentes conditions.
+
+Si le Licencié n'accepte pas ces conditions, il ne doit pas utiliser le Logiciel. Le Concédant accorde un droit d'utilisation annuel du Logiciel moyennant le paiement d'une redevance de licence, conformément au devis, bon de commande ou contrat particulier signé entre les Parties.
+
+
+ARTICLE 1 - DEFINITIONS
+
+Logiciel / OMNI 365 : Ensemble des programmes, modules, applications web et mobiles, interfaces, documentation, mises à jour, correctifs et services associés (fichiers, bureautique collaborative, messagerie, chat, visioconférence, etc.) commercialisés sous la marque OMNI 365.
+
+Licencié : L'entité (administration publique, collectivité, établissement public ou organisme autorisé) qui a souscrit une licence OMNI 365.
+
+Utilisateur Autorisé : Toute personne physique (agent, collaborateur, prestataire) expressément autorisée par le Licencié à utiliser le Logiciel dans la limite du nombre de licences acquises.
+
+Licence Annuelle : Droit d'utilisation non exclusif, non cessible et non transférable, accordé pour une période de douze (12) mois, renouvelable.
+
+Documentation : Manuels d'utilisation, guides d'administration, spécifications techniques et toute documentation fournie par Accel Tech.
+
+Données du Licencié : Ensemble des données, documents, contenus et informations saisis, stockés ou traités par le Licencié ou ses Utilisateurs Autorisés via OMNI 365.
+
+Contrat Particulier : Devis accepté, bon de commande, contrat-cadre ou convention spécifique signé entre Accel Tech (ou son partenaire agréé) et le Licencié.
+
+
+ARTICLE 2 - OCTROI DE LICENCE
+
+2.1. Accel Tech concède au Licencié un droit personnel, non exclusif, non cessible, non transférable et non sous-licenciable d'utiliser OMNI 365, uniquement pour ses besoins internes de service public, dans la limite du nombre d'Utilisateurs Autorisés et des modules souscrits.
+
+2.2. La Licence est accordée à titre onéreux pour une durée d'un (1) an à compter de la date d'activation ou de la date indiquée dans le Contrat Particulier, renouvelable par tacite reconduction ou par avenant, sous réserve du paiement de la redevance annuelle.
+
+2.3. Le droit d'utilisation couvre :
+- l'accès et l'utilisation des fonctionnalités souscrites ;
+- l'installation éventuelle en mode On-Premise ou Private Cloud (selon l'offre) ;
+- la réception des mises à jour de sécurité et correctifs fournis pendant la période de validité de la Licence ;
+- l'accès au support technique conformément au niveau de service souscrit.
+
+2.4. Toute utilisation au-delà du nombre d'Utilisateurs Autorisés ou des modules souscrits constitue une violation du présent Contrat et peut entraîner la facturation de licences supplémentaires ou la suspension de l'accès.
+
+
+ARTICLE 3 - RESTRICTIONS D'UTILISATION
+
+Le Licencié s'interdit expressément de :
+a) copier, reproduire, modifier, adapter, traduire, décompiler, désassembler ou procéder à de l'ingénierie inverse du Logiciel, sauf dans les limites autorisées par la loi applicable ;
+b) céder, louer, prêter, sous-licencier, distribuer ou mettre le Logiciel à disposition de tiers non autorisés ;
+c) utiliser le Logiciel pour le compte de tiers ou dans le cadre d'une activité de service bureau (sauf accord écrit préalable) ;
+d) supprimer ou altérer les mentions de propriété intellectuelle, marques ou logos d'Accel Tech ;
+e) utiliser le Logiciel de manière illégale, contraire à l'ordre public ou aux bonnes mœurs, ou pour traiter des contenus illicites ;
+f) tenter de contourner les mécanismes de contrôle de licences ou de sécurité ;
+g) exporter ou réexporter le Logiciel en violation des réglementations applicables en matière de contrôle des exportations.
+
+
+ARTICLE 4 - PROPRIETE INTELLECTUELLE
+
+4.1. OMNI 365, sa Documentation, ses codes sources (lorsqu'ils sont fournis), ses marques, logos et tous les éléments associés restent la propriété exclusive d'Accel Tech ou de ses concédants.
+
+4.2. Le présent Contrat n'opère aucun transfert de propriété. Le Licencié ne dispose que d'un droit d'usage limité conformément aux présentes.
+
+4.3. Les Données du Licencié restent la propriété exclusive du Licencié. Accel Tech n'acquiert aucun droit de propriété sur ces données.
+
+4.4. Le Licencié s'engage à ne pas contester les droits de propriété intellectuelle d'Accel Tech et à signaler sans délai toute contrefaçon dont il aurait connaissance.
+
+
+ARTICLE 5 - OBLIGATIONS DU LICENCIE
+
+Le Licencié s'engage à :
+- utiliser le Logiciel conformément à la Documentation et aux présentes conditions ;
+- limiter l'accès aux seuls Utilisateurs Autorisés et à veiller au respect du Contrat par ces derniers ;
+- assurer la sécurité de ses identifiants d'accès et la confidentialité des mots de passe ;
+- ne pas introduire de virus, logiciels malveillants ou codes nuisibles ;
+- respecter l'ensemble des lois et réglementations applicables, notamment en matière de protection des données personnelles, de cybersécurité et de secret professionnel / défense ;
+- collaborer de bonne foi avec Accel Tech pour le suivi des licences (audits éventuels dans des conditions raisonnables).
+
+
+ARTICLE 6 - PROTECTION DES DONNEES ET SOUVERAINETE
+
+6.1. Dans le cadre d'un déploiement On-Premise ou Private Cloud souverain, les Données du Licencié restent sous le contrôle exclusif du Licencié et sont hébergées selon les modalités convenues (territoire national ou régional).
+
+6.2. Accel Tech s'engage à ne pas accéder aux Données du Licencié sauf : sur instruction écrite du Licencié ; pour des besoins de support technique strictement nécessaires et avec l'accord préalable ; ou en cas d'obligation légale.
+
+6.3. Les Parties s'engagent à respecter les réglementations applicables en matière de protection des données personnelles (lois nationales de protection des données des pays UEMOA/CEDEAO, principes inspirés du RGPD, etc.).
+
+6.4. Le Licencié demeure responsable du traitement des données personnelles qu'il confie au Logiciel et de l'information des personnes concernées.
+
+6.5. En cas d'hébergement par un partenaire d'Accel Tech, un contrat de sous-traitance et un accord de traitement des données seront conclus conformément aux exigences légales.
+
+
+ARTICLE 7 - REDEVANCES ET PAIEMENT
+
+7.1. L'utilisation d'OMNI 365 est subordonnée au paiement de la redevance de licence annuelle et, le cas échéant, des frais de support, maintenance et services associés, tels que définis dans le Contrat Particulier ou le devis accepté.
+
+7.2. Les montants sont exprimés hors taxes. Les taxes applicables (TVA ou équivalent selon le pays) sont en sus.
+
+7.3. Le non-paiement à échéance peut entraîner, après mise en demeure restée sans effet, la suspension de l'accès au Logiciel et/ou la résiliation de la Licence.
+
+7.4. Les redevances ne sont pas remboursables, sauf disposition contraire expresse du Contrat Particulier.
+
+
+ARTICLE 8 - SUPPORT ET MAINTENANCE
+
+8.1. Pendant la durée de validité de la Licence, Accel Tech (ou son partenaire agréé) fournit un support technique selon le niveau de service souscrit (Standard, Premium, Ultimate ou équivalent).
+
+8.2. Les mises à jour de sécurité et correctifs critiques sont inclus. Les évolutions majeures de version peuvent faire l'objet de conditions particulières.
+
+8.3. Le support ne couvre pas les problèmes résultant d'une utilisation non conforme, de modifications non autorisées ou de défaillances de l'infrastructure du Licencié (sauf offre Managed).
+
+
+ARTICLE 9 - GARANTIES ET EXCLUSIONS
+
+9.1. Accel Tech garantit que le Logiciel, utilisé conformément à la Documentation, fonctionnera substantiellement selon les spécifications publiées pendant la durée de la Licence.
+
+9.2. Exclusion de garanties : Sauf disposition légale impérative contraire, Accel Tech exclut toute autre garantie, expresse ou implicite, notamment de qualité marchande, d'adéquation à un usage particulier ou d'absence d'interruption.
+
+9.3. Le Logiciel est fourni « en l'état ». Accel Tech ne garantit pas que le Logiciel sera exempt d'erreurs ou répondra à tous les besoins spécifiques du Licencié non expressément documentés.
+
+
+ARTICLE 10 - LIMITATION DE RESPONSABILITE
+
+10.1. Dans les limites autorisées par la loi applicable, la responsabilité totale d'Accel Tech au titre du présent Contrat est limitée au montant total des redevances effectivement payées par le Licencié au titre de la Licence Annuelle en cours.
+
+10.2. Accel Tech ne pourra être tenue responsable des dommages indirects, incidents, spéciaux, consécutifs ou punitifs (perte de données, perte d'exploitation, manque à gagner, etc.), même si elle a été informée de la possibilité de tels dommages.
+
+10.3. Les limitations ci-dessus ne s'appliquent pas en cas de faute lourde, de dol, ou d'atteinte à l'intégrité physique, dans la mesure où la loi applicable l'interdit.
+
+
+ARTICLE 11 - DUREE ET RESILIATION
+
+11.1. La Licence est consentie pour une durée d'un (1) an, renouvelable.
+
+11.2. Chaque Partie peut résilier le Contrat : en cas de manquement grave de l'autre Partie non réparé dans un délai de trente (30) jours après mise en demeure ; ou immédiatement en cas de cessation d'activité, insolvabilité ou procédure collective.
+
+11.3. A l'expiration ou à la résiliation :
+- le Licencié cesse immédiatement toute utilisation du Logiciel ;
+- le Licencié procède à la désinstallation et à la destruction des copies (sauf obligation légale de conservation) ;
+- les dispositions relatives à la propriété intellectuelle, à la confidentialité, à la limitation de responsabilité et au droit applicable survivent.
+
+11.4. Le Licencié dispose d'un droit de récupération de ses Données selon les modalités techniques convenues (export dans un format standard).
+
+
+ARTICLE 12 - CONFIDENTIALITE
+
+Chaque Partie s'engage à conserver strictement confidentielles les informations techniques, commerciales et stratégiques de l'autre Partie, pendant la durée du Contrat et pendant cinq (5) ans après son expiration, sauf obligation légale ou judiciaire contraire.
+
+
+ARTICLE 13 - DROIT APPLICABLE ET REGLEMENT DES LITIGES
+
+13.1. Le présent Contrat est régi par le droit du pays dans lequel le Licencié a son siège principal (ou, à défaut d'accord, par le droit du pays d'établissement d'Accel Tech), sous réserve des dispositions impératives de l'OHADA et des lois nationales de protection des consommateurs ou du secteur public.
+
+13.2. Tout litige relatif à la validité, l'interprétation ou l'exécution du présent Contrat fera l'objet d'une tentative de règlement amiable préalable.
+
+13.3. A défaut d'accord amiable dans un délai de soixante (60) jours, le litige sera soumis soit aux tribunaux compétents du ressort du siège du Licencié (pour les administrations publiques), soit, d'un commun accord, à un arbitrage conforme au Règlement d'arbitrage de la Cour Commune de Justice et d'Arbitrage (CCJA) de l'OHADA ou à tout autre centre d'arbitrage régional convenu.
+
+
+ARTICLE 14 - DISPOSITIONS GENERALES
+
+14.1. Le présent EULA, complété par le Contrat Particulier et la Documentation, constitue l'intégralité de l'accord entre les Parties et prévaut sur tout autre document antérieur.
+
+14.2. Toute modification doit faire l'objet d'un avenant écrit signé par les Parties.
+
+14.3. Si une clause est déclarée nulle ou inapplicable, les autres dispositions restent en vigueur.
+
+14.4. Le fait pour une Partie de ne pas se prévaloir d'un manquement ne constitue pas une renonciation.
+
+14.5. Le Licencié ne peut céder le présent Contrat sans l'accord préalable écrit d'Accel Tech.
+
+
+ACCEPTATION
+
+En utilisant OMNI 365, le Licencié reconnaît avoir pris connaissance du présent EULA et l'accepter pleinement.
+
+Pour toute question relative au présent Contrat :
+Accel Tech - Service Juridique / Licences
+Etude Maitre Macodou Ndour
+217, rue de Diourbel x Rue B, Point E
+
+Fait pour valoir ce que de droit.

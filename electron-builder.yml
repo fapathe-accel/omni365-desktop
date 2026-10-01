@@ -25,9 +25,15 @@ win:
   target: [nsis]
   artifactName: Omni365-Setup-${version}.${ext}
 
+# A step-by-step installer: welcome, the EULA to accept (build/installer.nsh
+# adds the checkbox), install for me or for everyone, folder, install, finish.
+# An update from electron-updater runs silently and skips these pages.
 nsis:
-  oneClick: true
+  oneClick: false
   perMachine: false
+  allowToChangeInstallationDirectory: true
+  license: build/eula.txt
+  include: build/installer.nsh
 
 mac:
   target:
